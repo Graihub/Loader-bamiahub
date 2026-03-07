@@ -11,7 +11,7 @@ local UniverseID = HttpService:JSONDecode(
 
 if UniverseID == 994732206 then
 StarterGui:SetCore("SendNotification",{
-        Title = "Loader",
+        Title = "Bamia Hub",
         Text = "Loader Success!",
         Duration = 5
     })
