@@ -3,6 +3,7 @@ _G.AutoTranslate = (_G.AutoTranslate == nil) and true or _G.AutoTranslate
 _G.SaveConfig = (_G.SaveConfig == nil) and true or _G.SaveConfig
 
 local HttpService = game:GetService("HttpService")
+local StarterGui = game:GetService("StarterGui")
 local placeId = game.PlaceId
 
 local UniverseID = HttpService:JSONDecode(
@@ -10,15 +11,24 @@ local UniverseID = HttpService:JSONDecode(
 ).universeId
 
 if UniverseID == 994732206 then
+    StarterGui:SetCore("SendNotification",{
+        Title = "Bamia Hub",
+        Text = "Nà Ná Na Na Ná",
+        Duration = 3
+    })
+StarterGui:SetCore("SendNotification",{
+        Title = "Bamia Hub",
+        Text = "Anh Độ Mixi",
+        Duration = 2
+    })
 StarterGui:SetCore("SendNotification",{
         Title = "Bamia Hub",
         Text = "Loader Success!",
         Duration = 5
     })
-
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/Gay/refs/heads/main/bamia"))()
 else
-    game:GetService("StarterGui"):SetCore("SendNotification",{
+    StarterGui:SetCore("SendNotification",{
         Title = "Bamia Hub",
         Text = "This script only works in Blox Fruits",
         Duration = 5
