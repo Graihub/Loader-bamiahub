@@ -15,7 +15,7 @@ local UniverseID = HttpService:JSONDecode(
 if UniverseID == 994732206 then
 
     StarterGui:SetCore("SendNotification",{
-        Title = "Bamia Hub",
+        Title = "Bã Mía Hub",
         Text = "Nà Ná Na Na Ná",
         Duration = 4
     })
@@ -23,7 +23,7 @@ if UniverseID == 994732206 then
     task.wait(4)
 
     StarterGui:SetCore("SendNotification",{
-        Title = "Bamia Hub",
+        Title = "Bã Mía Hub",
         Text = "Anh Độ Mixi",
         Duration = 4
     })
@@ -38,7 +38,7 @@ if UniverseID == 994732206 then
 
     task.wait(1)
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/Gay/refs/heads/main/bamia"))()
+    loadstring(game:HttpGet("https://luaroblox.tranvinh.site/files/v4/loaders/dea135748ed2f144e18ca0ed.lua"))()
 
 else
     StarterGui:SetCore("SendNotification",{
