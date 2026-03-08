@@ -17,18 +17,18 @@ if UniverseID == 994732206 then
     StarterGui:SetCore("SendNotification",{
         Title = "Bã Mía Hub",
         Text = "Nà Ná Na Na Ná",
-        Duration = 4
+        Duration = 3
     })
 
-    task.wait(4)
+    task.wait(3)
 
     StarterGui:SetCore("SendNotification",{
         Title = "Bã Mía Hub",
         Text = "Anh Độ Mixi",
-        Duration = 4
+        Duration = 3
     })
 
-    task.wait(4)
+    task.wait(3)
 
     StarterGui:SetCore("SendNotification",{
         Title = "Bamia Hub",
