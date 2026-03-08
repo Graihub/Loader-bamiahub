@@ -31,7 +31,7 @@ if UniverseID == 994732206 then
     task.wait(3)
 
     StarterGui:SetCore("SendNotification",{
-        Title = "Bamia Hub",
+        Title = "Bã Mía Hub",
         Text = "Loader Success!",
         Duration = 5
     })
