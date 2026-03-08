@@ -25,10 +25,10 @@ if UniverseID == 994732206 then
     StarterGui:SetCore("SendNotification",{
         Title = "Bã Mía Hub",
         Text = "Anh Độ Mixi",
-        Duration = 3
+        Duration = 2
     })
 
-    task.wait(3)
+    task.wait(2)
 
     StarterGui:SetCore("SendNotification",{
         Title = "Bã Mía Hub",
@@ -41,9 +41,15 @@ if UniverseID == 994732206 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/Gay/refs/heads/main/bamia"))()
 
 else
+
     StarterGui:SetCore("SendNotification",{
         Title = "Bã Mía Hub",
-        Text = "This script only works in Blox Fruits",
+        Text = "Game Not Supported",
         Duration = 5
     })
+
+    task.wait(1)
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/notsupport/refs/heads/main/Ui"))()
+
 end
