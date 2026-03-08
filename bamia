@@ -14,8 +14,12 @@ local UniverseID = HttpService:JSONDecode(
 
 if UniverseID == 994732206 then
 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/notifywelcome/refs/heads/main/Gaynotify"))()
+
+    task.wait(1)
+
     StarterGui:SetCore("SendNotification",{
-        Title = "Bã Mía Hub",
+        Title = "Bamia Hub",
         Text = "Nà Ná Na Na Ná",
         Duration = 3
     })
@@ -23,7 +27,7 @@ if UniverseID == 994732206 then
     task.wait(3)
 
     StarterGui:SetCore("SendNotification",{
-        Title = "Bã Mía Hub",
+        Title = "Bamia Hub",
         Text = "Anh Độ Mixi",
         Duration = 2
     })
@@ -31,7 +35,7 @@ if UniverseID == 994732206 then
     task.wait(2)
 
     StarterGui:SetCore("SendNotification",{
-        Title = "Bã Mía Hub",
+        Title = "Bamia Hub",
         Text = "Loader Success!",
         Duration = 5
     })
@@ -41,9 +45,8 @@ if UniverseID == 994732206 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/Gay/refs/heads/main/bamia"))()
 
 else
-
     StarterGui:SetCore("SendNotification",{
-        Title = "Bã Mía Hub",
+        Title = "Bamia Hub",
         Text = "Game Not Supported",
         Duration = 5
     })
@@ -51,5 +54,4 @@ else
     task.wait(1)
 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/notsupport/refs/heads/main/Ui"))()
-
 end
