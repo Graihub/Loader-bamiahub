@@ -1,4 +1,4 @@
-epeat task.wait() until game:IsLoaded()
+repeat task.wait() until game:IsLoaded()
 
 _G.ThemeID = _G.ThemeID or nil
 _G.AutoTranslate = (_G.AutoTranslate == nil) and true or _G.AutoTranslate
@@ -6,43 +6,43 @@ _G.SaveConfig = (_G.SaveConfig == nil) and true or _G.SaveConfig
 
 local HttpService = game:GetService("HttpService")
 local StarterGui = game:GetService("StarterGui")
-local placeId = game.PlaceId
 
-local UniverseID = HttpService:JSONDecode(
-    game:HttpGet("https://apis.roblox.com/universes/v1/places/"..placeId.."/universe")
-).universeId
+local function Notify(title, text, time)
+    StarterGui:SetCore("SendNotification", {
+        Title = title,
+        Text = text,
+        Duration = time or 3
+    })
+end
+
+local UniverseID
+local success, result = pcall(function()
+    return HttpService:JSONDecode(
+        game:HttpGet("https://apis.roblox.com/universes/v1/places/"..game.PlaceId.."/universe")
+    )
+end)
+
+if success and result then
+    UniverseID = result.universeId
+else
+    Notify("Bamia Hub", "Lỗi lấy UniverseID", 5)
+    return
+end
 
 if UniverseID == 994732206 then
-
+    
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/notifywelcome/refs/heads/main/Gaynotify"))()
 
-    task.wait(1)
+    Notify("Bamia Hub", "Bạn đã được Do Mixi tặng khô gà", 3)
+    task.wait(2)
 
-    StarterGui:SetCore("SendNotification",{
-        Title = "Bamia Hub",
-        Text = "Bạn đã được Do Mixi tặng khô gà",
-        Duration = 3
-    })
-
-    task.wait(3)
-
-    StarterGui:SetCore("SendNotification",{
-        Title = "Bamia Hub",
-        Text = "Loader Success!",
-        Duration = 5
-    })
-
+    Notify("Bamia Hub", "Loader Success!", 5)
     task.wait(1)
 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/kaitun/refs/heads/main/Bamia.lua.txt"))()
 
 else
-    StarterGui:SetCore("SendNotification",{
-        Title = "Bamia Hub",
-        Text = "Game Not Supported",
-        Duration = 5
-    })
-
+    Notify("Bamia Hub", "Game Not Supported", 5)
     task.wait(1)
 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/notsupport/refs/heads/main/Ui"))()
